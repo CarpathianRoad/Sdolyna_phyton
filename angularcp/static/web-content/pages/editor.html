@@ -1,0 +1,53 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Солнечная Долина</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Главная <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Выход</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container" ng-controller="editorController">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <a href="" class="btn btn-success">Добавить</a>
+            </div>
+            <div class="table-responsive">
+                <table class="article-table table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th class="text-center" style="width:3%">#</th>
+                        <th style="width:40%">Название</th>
+                        <th class="text-center" style="width:10%">Категория</th>
+                        <th style="width: 3%;"></th>
+                        <th style="width: 3%;"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table-item" ng-repeat="items in message">
+                        <td class="text-center counter">{{ items.article_id }}</td>
+                        <td><a target="_blank">{{ items.article_title }}</a></td>
+                        <td class="text-center"><a href="">{{ items.article_category }}</a></td>
+                        <td class="text-center"> <a href="/#/system/tools/edit/page={{ items.article_id }}"><img class="article-buttons" src="../static/frontend/img/edit.png" /></a></td>
+                        <td class="text-center"><a href="/#/system/tools/delete/page={{ items.article_id }}"><img class="article-buttons" src="../static/frontend/img/delete.png" /></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

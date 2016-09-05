@@ -1,0 +1,63 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Солнечная Долина</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Главная <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Выход</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container" ng-controller="editPageController">
+    <div class="row">
+        <div class="col-lg-4">
+            <strong>Изменить категорию:</strong>
+            <div class="input-group-btn">
+                <div class="btn-group" aria-required="true">
+                    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Left'">Фестивали</label>
+                    <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'Right'">Детские Лагеря</label>
+                </div>
+            </div>
+        </div>
+        <strong>Изменить заголовок:</strong>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-tag" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="{{ message.article_title }}" name="change_email">
+        </div><!-- /input-group -->
+
+        <div class="input-group">
+            <div class="col-lg-10">
+                <div ng-controller="DatepickerPopupDemoCtrl">
+                    <label for="dt1">Начало,</label>
+                    <label for="dt2">конец</label>
+                    <p class="input-group">
+                        <input name="date_start" id="dt1" type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                    <p class="input-group">
+                        <input name="date_end" id="dt2" type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <textarea placeholder="">{{message.article_text}}</textarea>
+    </div>
+</div>
