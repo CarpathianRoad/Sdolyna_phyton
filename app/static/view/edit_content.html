@@ -1,0 +1,86 @@
+<div class="container">
+    <h2>Редактировать статью в категории ????:</h2>
+    <hr>
+    <div class="row">
+        <!-- edit form column -->
+        <div class="col-md-12 personal-info">
+            <div class="alert alert-info alert-dismissable">
+                <a class="panel-close close" data-dismiss="alert">×</a>
+                <i class="fa fa-coffee"></i>
+                This is an <strong>.alert</strong>. Use this to show important messages to the user.
+            </div>
+            <h3>Свойства:</h3>
+            {{content}}
+            <form class="form-horizontal" role="form">
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Заголовок: <label class="text-danger">*</label></label>
+                    <div class="btn-group col-lg-8" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">Русский</button>
+                        <button type="button" class="btn btn-default">Английский</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-8">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+
+                <div class="form-group" style="padding-top: 30px">
+                    <label class="col-lg-3 control-label">Дата: <label class="text-danger">*</label></label>
+                    <div class="input-group">
+                        <div class="col-lg-8">
+                            <div ng-controller="DatepickerPopupDemoCtrl">
+                                <label for="dt1">начало,</label>
+                                <label for="dt2">конец</label>
+                                <p class="input-group">
+                                    <input name="date_start" id="dt1" type="text" class="form-control"
+                                           uib-datepicker-popup ng-model="dt" is-open="popup2.opened"
+                                           datepicker-options="dateOptions" ng-required="true" close-text="Close"/>
+                                    <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open2()"><i
+                                    class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                                </p>
+                                <p class="input-group">
+                                    <input name="date_end" id="dt2" type="text" class="form-control"
+                                           uib-datepicker-popup ng-model="dt" is-open="popup2.opened"
+                                           datepicker-options="dateOptions" ng-required="true" close-text="Close"/>
+                                    <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="open2()"><i
+                                    class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="padding-top: 30px">
+                    <label class="col-lg-3 control-label">Галерея: <label class="text-danger">*</label></label>
+                    <div class="col-lg-8">
+                        <input type="button" class="btn btn-primary" value="загрузить">
+                    </div>
+                </div>
+
+                <div class="form-group" style="padding-top: 30px">
+                    <label class="col-lg-3 control-label">Текст: <label class="text-danger">*</label></label>
+                      <div class="btn-group col-lg-8" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">Русский</button>
+                        <button type="button" class="btn btn-default">Английский</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                        <input type="submit" class="btn btn-success" value="Сохранить">
+                        <span></span>
+                        <input type="button" class="btn btn-danger" value="Назад">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<hr>

@@ -1,0 +1,146 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="addContent()"></span> Добавить
+                </button>
+            </div>
+            <uib-tabset>
+                <uib-tab heading="Все">
+                    <div class="table-responsive">
+                        <table class="article-table table table-bordered table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:3%">#</th>
+                                <th style="width:40%">Название</th>
+                                <th style="width: 3%;">Языки</th>
+                                <th style="width: 3%;"></th>
+                                <th style="width: 3%;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="table-item" ng-repeat="items in allContent track by $index">
+                                <td class="text-center counter">{{ items.article_id }}</td>
+                                <td><a target="_blank">{{ items.article_title }}</a></td>
+                                <td class="text-center counter">RU, ENG</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default" ng-click="editContent(items.article_id)">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+                                    </button>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default" ng-click="deleteContent(items.article_id)"><span
+                                            class="glyphicon glyphicon-remove"
+                                            aria-hidden="true"></span> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Страны">
+                    <div class="table-responsive">
+                        <table class="article-table table table-bordered table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:3%">#</th>
+                                <th style="width:40%">Название</th>
+                                <th style="width: 3%;">Языки</th>
+                                <th style="width: 3%;"></th>
+                                <th style="width: 3%;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="table-item" ng-repeat="items in countries track by $index">
+                                <td class="text-center counter">{{ items.article_id }}</td>
+                                <td><a target="_blank">{{ items.article_title }}</a></td>
+                                <td class="text-center counter">RU, ENG</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default"  ng-click="editContent(items.article_id)">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+                                    </button>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-remove"
+                                            aria-hidden="true"></span> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Детские лагеря">
+                    <div class="table-responsive">
+                        <table class="article-table table table-bordered table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:3%">#</th>
+                                <th style="width:40%">Название</th>
+                                <th style="width: 3%;">Языки</th>
+                                <th style="width: 3%;"></th>
+                                <th style="width: 3%;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="table-item" ng-repeat="items in camps track by $index">
+                                <td class="text-center counter">{{ items.article_id }}</td>
+                                <td><a target="_blank">{{ items.article_title }}</a></td>
+                                <td class="text-center counter">RU, ENG</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default"  ng-click="editContent(items.article_id)">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+                                    </button>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-remove"
+                                            aria-hidden="true"></span> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </uib-tab>
+                <uib-tab heading="Фестивали">
+                    <div class="table-responsive">
+                        <table class="article-table table table-bordered table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:3%">#</th>
+                                <th style="width:40%">Название</th>
+                                <th style="width: 3%;">Языки</th>
+                                <th style="width: 3%;"></th>
+                                <th style="width: 3%;"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="table-item" ng-repeat="items in fests track by $index">
+                                <td class="text-center counter">{{ items.article_id }}</td>
+                                <td><a target="_blank">{{ items.article_title }}</a></td>
+                                <td class="text-center counter">RU, ENG</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default"  ng-click="editContent(items.article_id)">
+                                        <span class="glyphicon glyphicon-edit"
+                                              aria-hidden="true"></span> Edit
+                                    </button>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-default"><span
+                                            class="glyphicon glyphicon-remove"
+                                            aria-hidden="true"></span> Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </uib-tab>
+            </uib-tabset>
+        </div>
+    </div>
+</div>

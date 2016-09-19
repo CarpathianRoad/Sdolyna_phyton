@@ -1,0 +1,15 @@
+<style>
+    body {
+        background: #eee !important;
+    }
+</style>
+<body>
+    <div class="container wrapper">
+        <form class="form-signin" ng-submit="login()">
+            <h3 class="form-signin-heading" style="text-align:center">Авторизация</h3>
+            <input style="margin-bottom: 20px;" placeholder="Логин" type="text" class="form-control" name="email" ng-model="loginForm.email" required>
+            <input style="margin-bottom: 20px;" placeholder="Пароль" type="password" class="form-control" name="password" ng-model="loginForm.password" required>
+            <button class="btn btn-lg btn-primary btn-block submit-button" type="submit" ng-disabled="disabled">Войти</button>
+        </form>
+    </div>
+</body>

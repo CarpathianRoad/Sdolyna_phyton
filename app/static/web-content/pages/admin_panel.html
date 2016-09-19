@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+</head>
+<body>
+<div ng-include="'static/view/navbar.html'"></div>
+<div ng-controller="adminPanelCtrl">
+    <div ng-include="'static/view/all_content_table.html'" ng-show=show_table></div>
+    <div ng-include="'static/view/edit_content.html'" ng-show=show_edit></div>
+    <div ng-include="'static/view/add_content.html'" ng-show=show_add></div>
+</div>
+</body>
+</html>
